@@ -1,0 +1,22 @@
+# this demo is for ReplicationController
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    env: demo
+  name: rc-nginx
+spec:
+  template:
+    metadata: 
+      name: nginx-pod
+      labels:
+        env: demo
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx
+        ports:
+        - containerPort: 80
+  replicas: 3 
+  
+         
