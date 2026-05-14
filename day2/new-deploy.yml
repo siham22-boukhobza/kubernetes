@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: redis-new
+  name: redis-new
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-new
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: redis-new
+    spec:
+      containers:
+      - image: redis:alpine
+        name: redis
+        resources: {}
+status: {}
