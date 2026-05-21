@@ -132,10 +132,12 @@ NAME        READY   STATUS    RESTARTS   AGE   IP           NODE
 nginx-new   1/1     Running   0          10s   10.244.2.3   cluster-three-worker2
 ```
 ### 📊 Comparison: `Taints` vs `Node Selectors`
-| Concept | Purpose | Effect |
+| Concept | Objectif | Effet |
 |---|---|---|
-| `Taint` | Repel pods from node | Pods without toleration cannot schedule |
-| `Toleration` | Allow pod on tainted node | Pod can schedule on tainted node |
+| `Taint` | Éloigner les pods d'un nœud | Les pods sans `toleration` ne peuvent pas être planifiés |
+| `Toleration` | Permettre un pod sur un nœud avec taint | Le pod *peut* être planifié sur un nœud avec taint |
+| Node Label | Identifier les caractéristiques d'un nœud | Utilisé par `nodeSelector` et `nodeAffinity` |
+| Node Selector | Attirer les pods vers des nœuds spécifiques | Le pod n'est planifié que sur les nœuds dont les libellés correspondent |
 
 🧹 Clean Up
 ```bash
