@@ -132,11 +132,11 @@ NAME        READY   STATUS    RESTARTS   AGE   IP           NODE
 nginx-new   1/1     Running   0          10s   10.244.2.3   cluster-three-worker2
 ```
 ### 📊 Comparison: `Taints` vs `Node Selectors`
-Concept	            Purpose Effect
-`Taint`    	Repel pods from node	Pods without toleration cannot schedule
-`Toleration`	Allow pod on tainted node	Pod can (but doesn't have to) schedule on tainted node
-Node Label	Identify node characteristics	Used by nodeSelector and nodeAffinity
-Node Selector	Attract pods to specific nodes	Pod only schedules on nodes with matching labels
+| Concept | Purpose | Effect |
+|---|---|---|
+| `Taint` | Repel pods from node | Pods without toleration cannot schedule |
+| `Toleration` | Allow pod on tainted node | Pod can schedule on tainted node |
+
 🧹 Clean Up
 ```bash
 # Delete pods
