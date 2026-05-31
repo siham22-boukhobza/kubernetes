@@ -145,8 +145,9 @@ kubectl label node cluster-three-worker disktype-
 kubectl label node cluster-three-worker2 disktype-
 ```
 🔑 Key Takeaways
-Concept	Lesson
-`Hard Affinity`	Pod is blocked until label exists
-`Soft Affinity`	Pod schedules immediately using best effort
-`Node Labels`	Essential for directing pod placement
-`matchExpressions`	Flexible matching (In, NotIn, Exists, DoesNotExist)
+| Concept | Lesson |
+|---|---|
+| Hard Affinity | Pod is blocked until label exists |
+| Soft Affinity | Pod schedules immediately using best effort |
+| Node Labels | Essential for directing pod placement |
+| `matchExpressions` | Flexible matching (`In`, `NotIn`, `Exists`, `DoesNotExist`) |
