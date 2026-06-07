@@ -1,0 +1,14 @@
+# this is a simple pod
+
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: nginx-pod
+  labels:
+    name: nginx
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx123
+    ports:
+    - containerPort: 80

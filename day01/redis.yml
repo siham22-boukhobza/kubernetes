@@ -1,0 +1,12 @@
+# this is redis pod
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+  labels:
+    env: test
+spec:
+  containers:
+  - name: redis
+    image: rediss
