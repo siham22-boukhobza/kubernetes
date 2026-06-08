@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  firstname: boukhobza
+  lastname: siham
+kind: ConfigMap
+metadata:
+  name: app-cm
