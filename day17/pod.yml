@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: redis-pod
+spec:
+  containers:
+  - name: redis-container
+    image: redis:latest
+    volumeMounts:
+    - name: redis-storage
+      mountPath: /data/redis
+  volumes:
+  - name: redis-storage
+    emptyDir: {}    
